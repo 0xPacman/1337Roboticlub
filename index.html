@@ -27,34 +27,40 @@
   <div class="content" id="content">
     <h1>About us</h1>
     <p>
-      Robotic club is an extracurricular way for us to explore robotics in a more in-depth way  <em>...</em>
+      Robotic club is an extracurricular way for us to explore robotics in a more in-depth way  <em> `We typically focus on problem-solving and logical thinking.` </em>
     </p>
     <p>
-      test
+      We are a team-oriented competitive club in which students work together to build robots and program them to compete in events against teams from other schools.
     </p>
-    <h2>
-       We typically focus on problem-solving and logical thinking.
-    </h2>
+    <h2>Blink code for Arduino</h2>
     <pre>
-#include <stdio.h>
-int main()
-{
-  printf("Hello, World!\n");
-  return 0;
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);                       // wait for a second
+  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);                       // wait for a second
 }
     </pre>
-    <h2>A code</h2>
-    <p>just as a test</p>
+    <h2>Hello code for pico</h2>
     <pre>
 #include <stdio.h>
-int main()
-{
-    printf("Hello, World!\n");
+#include "pico/stdlib.h"
+
+int main() {
+    stdio_init_all();
+    while (true) {
+        printf("Welcome to 1337 Robotic Club!\n");
+        sleep_ms(1000);
+    }
     return 0;
 }
     </pre>
     <p>
-      Read more at 
+      Read more about 
   <a href="http://1337.ma">1337</a>
     </p>
   </div>
